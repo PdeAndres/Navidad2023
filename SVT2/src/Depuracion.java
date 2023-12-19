@@ -14,7 +14,7 @@ public class Depuracion {
 	   
 	    String array []= cadena1.split("");	    
 	    for(int i=0;i<array.length;i++) {
-	    	if(array[i]=="R") {
+	    	if(array[i].equals("R")) {
 	    		array[i]="r";
 	    	}
 	    }
@@ -27,12 +27,12 @@ public class Depuracion {
     private static boolean sonCadenasIguales(String cadena1, String cadena2) {        
       
     	 for (int i = 0; i < cadena1.length(); i++) {
-    		 String letra= cadena1.substring(i,i+1);
+    		 String letra = cadena1.substring(i,i+1);
              if (!letra.equals(cadena2.substring(i,i+1))) {
-                 return true;
+                 return false;
              }
          }
-         return false;
+         return true;
     }
 	
 }
